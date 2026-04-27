@@ -25,10 +25,12 @@
   .hero h1 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 400; color: #faf9f6; line-height: 1.4; margin-bottom: 1.5rem; }
   .hero h1 strong { font-weight: 500; }
   .hero p { font-size: 1rem; color: #d3d1c7; margin-bottom: 2rem; max-width: 420px; }
-  .btn-primary { display: inline-block; background: #993c1d; color: #fff; padding: 0.85rem 2rem; border-radius: 4px; text-decoration: none; font-size: 0.95rem; letter-spacing: 0.03em; transition: background 0.2s; }
+  .btn-primary { display: inline-block; background: #993c1d; color: #fff; padding: 0.85rem 2rem; border-radius: 4px; text-decoration: none; font-size: 0.95rem; letter-spacing: 0.03em; transition: background 0.2s; box-sizing: border-box; }
   .btn-primary:hover { background: #d85a30; }
-  .btn-outline { display: inline-block; border: 1px solid rgba(250,249,246,0.5); color: #faf9f6; padding: 0.85rem 2rem; border-radius: 4px; text-decoration: none; font-size: 0.95rem; margin-left: 1rem; transition: border-color 0.2s; }
+  .btn-outline { display: inline-block; border: 1px solid rgba(250,249,246,0.5); color: #faf9f6; padding: 0.85rem 2rem; border-radius: 4px; text-decoration: none; font-size: 0.95rem; margin-left: 1rem; transition: border-color 0.2s; box-sizing: border-box; }
   .btn-outline:hover { border-color: #faf9f6; }
+  .hero-buttons { display: flex; flex-direction: row; gap: 1rem; flex-wrap: wrap; }
+  .hero-buttons .btn-primary, .hero-buttons .btn-outline { margin: 0; text-align: center; }
 
   /* SECTION BASE */
   section { padding: 5rem 3rem; }
@@ -82,6 +84,8 @@
     .cards { grid-template-columns: 1fr; }
     .step { grid-template-columns: 40px 1fr; }
     footer { flex-direction: column; gap: 1rem; text-align: center; }
+    .hero-buttons { flex-direction: column; gap: 1rem; }
+    .hero-buttons .btn-primary, .hero-buttons .btn-outline { width: 100%; text-align: center; }
   }
 </style>
 </head>
@@ -105,8 +109,10 @@
     <p class="hero-eyebrow">思い出を、手のひらに</p>
     <h1>引き出しに眠る写真を、<strong>家族の宝物</strong>へ。</h1>
     <p>古い写真をフォトブックにまとめませんか。ページをめくるたびに、あの日の記憶が鮮やかによみがえります。</p>
-    <a href="https://okutte.jp/contact.html" class="btn-primary">無料でご相談する</a>
-    <a href="#benefits" class="btn-outline">詳しく見る</a>
+    <div class="hero-buttons">
+      <a href="https://okutte.jp/contact.html" class="btn-primary">無料でご相談する</a>
+      <a href="#benefits" class="btn-outline">詳しく見る</a>
+    </div>
   </div>
 </section>
 
